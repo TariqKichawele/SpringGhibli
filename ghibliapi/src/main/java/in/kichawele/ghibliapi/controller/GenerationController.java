@@ -50,9 +50,7 @@ public class GenerationController {
         @RequestBody TextGenerationRequestDTO request
     ) {
         try {
-            logger.info("Received text generation request - prompt: {}, style: {}", request.getPrompt(), request.getStyle());
             byte[] imageBytes = ghibliArtService.createGhibliArtFromText(request.getPrompt(), request.getStyle());
-            logger.info("Successfully generated image from text");
             return ResponseEntity.ok(imageBytes);
         } catch (Exception e) {
             logger.error("Error generating Ghibli art from text: {}", e.getMessage(), e);

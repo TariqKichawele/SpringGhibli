@@ -10,8 +10,8 @@ public class TextToImageRequest {
     @JsonProperty("cfg_scale")
     private double cfgScale = 7;
     
-    private int height = 512;
-    private int width = 768;
+    private int height = 1024;
+    private int width = 1024;
     private int samples = 1;
     private int steps = 30;
     
